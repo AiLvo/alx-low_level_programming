@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
- * main - Entry point. Checks if a number is positive, negative, or zero.
+ * main - Entry point. Generates a random number and determines if it's
+ *        positive, negative, or zero. Prints the result.
  *
  * Return: Always 0 (Success)
  */
@@ -14,6 +14,7 @@ int main(void)
     srand(time(0));
     n = rand() - RAND_MAX / 2;
 
+    /* Check if n is positive, negative, or zero */
     if (n > 0)
     {
         printf("%d is positive\n", n);
@@ -29,4 +30,3 @@ int main(void)
 
     return (0);
 }
-
