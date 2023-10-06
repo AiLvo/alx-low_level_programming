@@ -1,20 +1,23 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase followed by a new line.
+ * main - Prints the lowercase alphabet followed by a new line.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char letter;
+    char az[26] = "abcdefghijklmnopqrstuvwxyz"; // Array containing the alphabet
+    int i;
 
-    for (letter = 'a'; letter <= 'z'; letter++)
+    for (i = 0; i < 26; i++)
     {
-        putchar(letter);
+        putchar(az[i]); // Print each character of the alphabet
     }
-    
-    putchar('\n');
-    
+
+    putchar('\n'); // Print a newline character
+
     return (0);
 }
