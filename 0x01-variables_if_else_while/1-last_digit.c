@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry point. Generates a random number and checks its last digit.
- * Prints if the last digit is greater than 5, less than 6 and not 0, or 0.
+ * main - Entry point. Checks the last digit of a random number
+ * and prints if it's greater than 5, less than 6 and not 0, or 0.
  *
  * Return: Always 0 (Success)
  */
@@ -13,23 +13,21 @@ int main(void)
     int n;
 
     srand(time(0));
-    n = rand() % 100; // Ensures n is within 0 to 99
+    n = rand() - RAND_MAX / 2;
 
-    printf("Last digit of %d is %d and is ", n, n % 10);
-
-    if (n % 10 > 5)
+    if ((n % 10) > 5)
     {
-        printf("greater than 5\n");
+        printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
     }
-    else if (n % 10 == 0)
+    else if ((n % 10) < 6 && (n % 10) != 0)
     {
-        printf("0\n");
+        printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
     }
     else
     {
-        printf("less than 6 and not 0\n");
+        printf("Last digit of %d is %d and is 0\n", n, n % 10);
     }
 
     return (0);
 }
-
+}
