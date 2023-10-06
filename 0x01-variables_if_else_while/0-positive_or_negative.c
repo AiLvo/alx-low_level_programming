@@ -3,18 +3,16 @@
 #include <stdio.h>
 
 /**
- * more headers goes there
- *
  * main - Checks if a number is positive, negative or zero.
  *
- * betty style doc for function main goes there */
+ * Return output
+ */
 int main(void)
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
 	if (n > 0)
 	{
 		printf("%d is positive\n",n);
