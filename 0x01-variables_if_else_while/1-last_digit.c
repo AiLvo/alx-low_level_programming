@@ -1,32 +1,25 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - Entry point. Checks the last digit of a random number
- * and prints if it's greater than 5, less than 6 and not 0, or 0.
+ * main - Entry point of the program
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int n;
+    char letter = 'a';
 
-    srand(time(0));
-    n = rand() - RAND_MAX / 2;
+    while (letter <= 'z')
+    {
+        /* Print the current letter using putchar */
+        putchar(letter);
+        /* Move to the next letter */
+        letter++;
+    }
 
-    if ((n % 10) > 5)
-    {
-        printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
-    }
-    else if ((n % 10) < 6 && (n % 10) != 0)
-    {
-        printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
-    }
-    else
-    {
-        printf("Last digit of %d is %d and is 0\n", n, n % 10);
-    }
+    /* Print a new line using putchar */
+    putchar('\n');
 
     return (0);
 }
+
