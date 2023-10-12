@@ -1,26 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - program to find fibonacci number
- * Return: 0
+ * main - prints the sum of even fibonacci numbers
+ * on values less than 4000000
+ * Return: nothing!
  */
-
 int main(void)
 {
-        int limit = 4000000;
-        int num1 = 1;
-        int num2 = 2;
-        int next;
-        int sum = 2;
+	int i = 0;
+	long j = 1, a = 2, sum = a;
 
-       while (next <= limit)
-       {
-       next = num1 + num2;
-       if (next % 2 == 0)
-	       sum = sum + next :
-       num1 = num2;
-       num2 = next;
-       }
-       printf("%d\n", sum);
-       return (0);
+	while (a + j < 4000000)
+	{
+		a += j;
+		if (a % 2 == 0)
+		sum += a;
+		j = a - j;
+		++i;
+	}
+	printf("%ld\n", sum);
+	return (0);
 }
