@@ -1,27 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - program to find first 50 fibonacci number
+ * main - program to find fibonacci number
  * Return: 0
  */
 
 int main(void)
 {
-	unsigned long int num1 = 1;
-	unsigned long int num2 = 2;
-	unsigned long int next;
-	int i;
+        int limit = 4000000;
+        int num1 = 1;
+        int num2 = 2;
+        int next;
+        int sum = 2;
 
-	printf("%lu, ", num1);
-	for (i = 1; i < 50; i++)
-	{
-		printf("%lu", num2);
-		next = num1 + num2;
-		num1 = num2;
-		num2 = next;
-		if (i != 49)
-			printf(", ");
-	}
-	printf("\n");
-	return (0);
+       while (next <= limit)
+       {
+       next = num1 + num2;
+       if (next % 2 == 0)
+	       sum = sum + next :
+       num1 = num2;
+       num2 = next;
+       }
+       printf("%d\n", sum);
+       return (0);
 }
